@@ -37,9 +37,22 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "public/assets/plugins/fontawesome-free/css/all.min.css",
+              "public/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "public/assets/dist/css/adminlte.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
+              "public/assets/dist/js/adminlte.js",
+              "public/assets/plugins/jquery-mousewheel/jquery.mousewheel.js",
+              "public/assets/plugins/raphael/raphael.min.js",
+              "public/assets/plugins/jquery-mapael/jquery.mapael.min.js",
+              "public/assets/plugins/jquery-mapael/maps/usa_states.min.js",
+              "public/assets/plugins/chart.js/Chart.min.js",
+              "public/assets/dist/js/demo.js",
+              "public/assets/dist/js/pages/dashboard2.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
