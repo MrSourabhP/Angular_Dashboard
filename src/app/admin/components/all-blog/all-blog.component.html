@@ -1,0 +1,59 @@
+<main id="main">
+  <!-- /.row -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title align-center">All Blog Table</h3>
+
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+              <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-default">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap" [border]="2">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Sentence</th>
+                <th>Author Name</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let b of blogs">
+                <th scope="row">{{b.id}}</th>
+                <td>{{b.name}}</td>
+                <td>{{b.sentence}}</td>
+                <td>{{b.authorname}}</td>
+                <td>{{b.date}}</td>
+                <td>{{b.description}}</td>
+                <td><img class="img-fliud" height="60" width="70" [src]="'data:image/jpeg;base64,' + b.image3" alt="loading.."></td>
+                <td>
+                  <button type="submit" class="btn btn-success"><a routerLink="/admin/update-blog/{{b.id}}">Update</a></button>
+                  <button type="submit" class="btn btn-danger" (click)="deleteBlog(b.id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+  </div>
+  </main>
+

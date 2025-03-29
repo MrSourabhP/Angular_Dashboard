@@ -1,0 +1,60 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6 bg-primary">
+          <h1>Company-Service Form</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#"></a></li>
+            <li class="breadcrumb-item active">Company-Service</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title text-bold">Update Company-Service</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="card-body">
+                <input type="text" name="id" formControlName="id" id="id">
+                <div class="form-group">
+                  <label for="projectname">Project:</label>
+                  <input type="text" class="form-control" name="projectname" id="projectname" formControlName="projectname" placeholder="Enter Project Name">
+                </div>
+                <div class="form-group">
+                  <label for="InputExample">Project Summary:</label>
+                  <textarea type="text" class="form-control" name="projectsummary" id="InputExample" formControlName="projectsummary"></textarea>
+                </div>
+                <div class="form-group mb-2">
+                  <label for="image">File Input</label>
+                  <input class="form-control" type="file" checked name="image" formControlName="image" (change)="onFileSelect($event)" id="image"/>
+                </div>
+                <img height="60" width="70" [src]="'data:image/svg+xml;base64,' + company.image" alt="loading...">
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-info">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

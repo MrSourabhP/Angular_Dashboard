@@ -8,7 +8,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form [formGroup]="form" (ngSubmit)="formSubmit()" action="" method="post">
+      <form [formGroup]="form" (ngSubmit)="formSubmit()">
         <div class="input-group mb-3">
           <input formControlName="username" type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -44,11 +44,11 @@
 
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+        <a routerLink="https://www.facebook.com" class="btn btn-block btn-primary">
+          <i class="fa fa-facebook">Sign in using Facebook</i>
         </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+        <a routerLink="https://www.google.com" class="btn btn-block btn-danger">
+          <i class="fa fa-google">Sign in using Google</i>
         </a>
       </div>
       <!-- /.social-auth-links -->
@@ -57,7 +57,7 @@
         <a href="forgot-password.html">I forgot my password</a>
       </p>
       <p class="mb-0">
-        <a href="sign-up.html" class="text-center">Register a new membership</a>
+        <a routerLink="/sign-up" class="text-center">Register a new membership</a>
       </p>
     </div>
     <!-- /.login-card-body -->

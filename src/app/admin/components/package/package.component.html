@@ -1,0 +1,97 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>PACKAGE</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#"></a></li>
+            <li class="breadcrumb-item active">Pricing</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Package Details</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="form" (ngSubmit)="formSubmit()">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="exampleInputName1">Pricing Plan Name:</label>
+                  <input type="text" class="form-control" name="pricename" id="pricename" formControlName="pricename" placeholder="Enter Plan">
+                </div>
+                <div class="form-group">
+                  <label for="rate">Rate:</label>
+                  <input type="text" class="form-control" name="rate" id="rate" placeholder="Price" formControlName="rate">
+                </div>
+                <div class="form-group form-input-box">
+                  <h6>Plan Details</h6>
+                  <input type="checkbox" name="limitedspace" id="" value="true" formControlName="limitedspace">
+                  <label for="limitedspace">Limited Space</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="unlimitedspace" id="" value="true" formControlName="unlimitedspace">
+                  <label for="unlimitedspace">Unlimited Space</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="domainames" id="" value="true" formControlName="domainames">
+                  <label for="domainames">30 Domain Names</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="freessl" id="" value="true" formControlName="freessl">
+                   <label for="freessl">Free SSL</label>
+                  </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="dailybackup" id="" value="true" formControlName="dailybackup">
+                  <label for="dailybackup">Daily Backup</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="freetemplates" id="" value="true" formControlName="freetemplates">
+                  <label for="freetemplates">Free Templates</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="freemail" id="" value="true" formControlName="freemail">
+                  <label for="freemail">Free Email</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="tendatabase" id="" value="true" formControlName="tendatabase">
+                  <label for="tendatabase">10 Databases</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="unlimitedemailadd" id="" value="true" formControlName="unlimitedemailadd">
+                  <label for="unlimitedemailadd">Unlimited Email Address</label>
+                </div>
+                <div class="form-group form-input-box">
+                  <input type="checkbox" name="livesupport" id="" value="true" formControlName="livesupport">
+                  <label for="livesupport">Live Support</label>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-danger">Cancel</button>
+                </div>
+              </div>
+              <!-- /.card-body -->
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

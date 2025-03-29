@@ -1,0 +1,52 @@
+<main id="main">
+<!-- /.row -->
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title text-bold">Company Service</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap" [border]="2">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Project Name</th>
+              <th>Project Summary</th>
+              <th>Image</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let c of company">
+              <th scope="row">{{c.id}}</th>
+              <td>{{c.projectname}}</td>
+              <td>{{c.projectsummary}}</td>
+              <td><img class="img-fliud" [src]="'data:image/svg+xml;base64,' + c.image" alt="loading.."></td>
+              <td>
+                <button type="submit" class="btn btn-success"><a routerLink="/admin/update-company/{{c.id}}">Update</a></button>
+                <button type="submit" class="btn btn-danger" (click)="deleteCompany(c.id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
+</main>

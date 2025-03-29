@@ -14,7 +14,4 @@ export class AuthService {
     return this.http.post(baseUrl + "/api/service/login", data)
   }
 
-  public register(data:any):Observable<any>{
-    return this.http.post(baseUrl + "/api/service/create-student", data)
-  }
 }

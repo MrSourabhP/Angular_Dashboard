@@ -11,19 +11,11 @@ import { Component } from '@angular/core';
 export class SignUpComponent {
   constructor (private service:AuthService){}
 
-  form : FormGroup = new FormGroup({
-    "name" : new FormControl(""),
-    "email" : new FormControl(""),
-    "password" : new FormControl("")
-  })
 
-  formSubmit(){
-    this.service.register(this.form.value).subscribe(res => {
-      console.log(res);
 
-    })
+
 
 
   }
 
-}
+

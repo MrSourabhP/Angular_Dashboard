@@ -1,0 +1,71 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>BLOGS/NEWS</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#"></a></li>
+            <li class="breadcrumb-item active">Blogs/News</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Our Blogs/News</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="form" (ngSubmit)="formSubmit()">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="exampleInputName1">Blog Name:</label>
+                  <input type="text" class="form-control" name="name" id="exampleInputName1" formControlName="name" placeholder="Enter Blog name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInput">Blog Sentence:</label>
+                  <input type="text" class="form-control" name="sentence" id="exampleInput" formControlName="sentence" placeholder="Enter Blog Sentence">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInput">Blog Author Name:</label>
+                  <input type="text" class="form-control" name="authorname" id="exampleInput" formControlName="authorname" placeholder="Enter Blog Author-Name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputDate">Date</label>
+                  <input type="date" class="form-control" name="date" id="exampleInputDate" formControlName="date">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInput">Blog Description:</label>
+                  <textarea type="text" class="form-control" name="description" id="exampleInput" formControlName="description"></textarea>
+                </div>
+                <div class="form-group mb-2">
+                  <label for="profile">File Input</label>
+                  <input class="form-control" type="file" checked name="image" formControlName="image3" (change)="onFileSelect($event)" id="profile"/>
+                </div>
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary" routerLink="/admin/all-blog">Submit</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

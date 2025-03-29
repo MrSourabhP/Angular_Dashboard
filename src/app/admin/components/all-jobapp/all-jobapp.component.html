@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">All Job Applications</h3>
+  </div>
+  <!-- /.card-header -->
+  <div class="card-body">
+    <table class="table table-bordered" style="background-color: #56b5db;">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email_ID</th>
+          <th>Contact</th>
+          <th>Address</th>
+          <th>Position</th>
+          <th>Skill</th>
+          <th>Employee Resume</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let n of job">
+          <th scope="row">{{n.id}}</th>
+          <td>{{n.name}}</td>
+          <td>{{n.email}}</td>
+          <td>{{n.contact}}</td>
+          <td>{{n.address}}</td>
+          <td>{{n.position}}</td>
+          <td>{{n.skl}}</td>
+          <td><button type="button" class="btn btn-warning" (click)="fetchResume(n.id)">View Resume</button></td>
+          <td>
+            <button type="submit" class="btn btn-danger" (click)="deleteStudent(n.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /.card-body -->
+</div>

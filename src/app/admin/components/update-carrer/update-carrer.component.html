@@ -1,0 +1,70 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>CARRERS</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#"></a></li>
+            <li class="breadcrumb-item active">Carrers</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Carrers</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="card-body">
+                <input type="hidden" class="form-control" formControlName="id">
+                <div class="form-group">
+                  <label for="role">Job Role:</label>
+                  <input type="text" class="form-control" name="role" id="role" formControlName="role" placeholder="Enter Job Role">
+                </div>
+                <div class="form-group">
+                  <label for="experience">Experience:</label>
+                  <input type="text" class="form-control" name="experience" id="experience" formControlName="experience" placeholder="Enter Your Experience">
+                </div>
+                <div class="form-group">
+                  <label for="skill">Skills:</label>
+                  <input type="text" class="form-control" name="skill" id="skill" formControlName="skill">
+                </div>
+                <div class="form-group">
+                  <label for="vacancy">Vacancies:</label>
+                  <input type="text" class="form-control" name="vacancy" id="vacancy" formControlName="vacancy" placeholder="Enter Vacancies">
+                </div>
+                <div class="form-group">
+                  <label for="joblocation">Job Location:</label>
+                  <input type="text" class="form-control" name="joblocation" id="joblocation" formControlName="joblocation" placeholder="Enter Job Role">
+                </div>
+                <div class="form-group">
+                  <label for="description">Job Description:</label>
+                  <textarea type="text" class="form-control" name="description" id="description" formControlName="description"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

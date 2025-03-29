@@ -6,10 +6,25 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a routerLink="/home" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a routerLink="/contact" class="nav-link">Contact</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a routerLink="/service" class="nav-link">Service</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a routerLink="/projects" class="nav-link">Projects</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a routerLink="/testinomials" class="nav-link">Testinomials</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a routerLink="/team" class="nav-link">Team</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a routerLink="/blogs" class="nav-link">Blogs</a>
       </li>
     </ul>
 
@@ -131,6 +146,9 @@
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
+      </li>
+      <li>
+        <button type="submit" class="btn btn-outline-danger" (click)="logout()">Log-Out</button>
       </li>
     </ul>
   </nav>
